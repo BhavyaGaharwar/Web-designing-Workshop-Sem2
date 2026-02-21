@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(to bottom,#083c40,#021e21);
+}
+
+/* Main Container */
+.container{
+    width:95%;
+    max-width:380px;
+    padding:20px;
+    text-align:center;
+}
+
+/* Chess Icon */
+.chess-icon{
+    font-size:80px;
+    margin-bottom:15px;
+}
+
+h2{
+    color:white;
+    margin-bottom:25px;
+    letter-spacing:2px;
+}
+
+/* Buttons */
+.btn{
+    width:100%;
+    padding:15px;
+    margin:12px 0;
+    border:none;
+    border-radius:18px;
+    font-size:17px;
+    font-weight:bold;
+    color:white;
+    cursor:pointer;
+    transition:0.3s ease;
+    box-shadow:0 6px 12px rgba(0,0,0,0.3);
+}
+
+/* Green Button */
+.green{
+    background:linear-gradient(to right,green,rgba(2, 98, 2, 0.273));
+}
+
+/* Blue Button */
+.blue{
+    background:linear-gradient(to right,rgb(0, 204, 255),#04697698);
+}
+
+/* Pink Button */
+.pink{
+    background:linear-gradient(to right,pink,rgb(185, 67, 86));
+}
+
+/* Purple Button */
+.purple{
+    background:linear-gradient(to right,rgb(211, 86, 211),purple);
+}
+
+/* Hover Effect */
+.btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 8px 18px rgba(0,0,0,0.4);
+}
+
+/* More Games Section */
+.more{
+    margin-top:25px;
+    color:white;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+/* Games Grid */
+.games{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.game-box{
+    background:white;
+    border-radius:12px;
+    padding:15px 5px;
+    font-size:12px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+/* Game Hover */
+.game-box:hover{
+    transform:translateY(-5px);
+    box-shadow:0 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Responsive */
+@media(max-width:480px){
+    .chess-icon{
+        font-size:65px;
+    }
+    h2{
+        font-size:18px;
+    }
+    .btn{
+        font-size:15px;
+        padding:12px;
+    }
+    .games{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
