@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of even numbers</title>
+    <style>
+        body{
+            background:white;
+            padding:10px;
+            text-align:center;
+            font-style:Ariel;
+        }
+        .container{
+            background:beige;
+            width:80%;
+            padding:10px;
+            border:20px;
+            border-shadow:0px 0px 5px gray;
+        }
+        input{
+            width:80%;
+            font-size:8px;
+            padding:10px;
+            font-style:bold;
+        }
+        button{
+            background:blue;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+        }
+        button:hover{
+            background-color:blue;
+        }
+        h2{
+            font-size:15px;
+            border:20px;
+            padding:10px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sum of even numbers</h1>
+        <input type="number" id="num" placeholder="Enter value of N">
+        <br><br>
+
+        <button onclick="calculateSum()">Calculate</button>
+        <h2> id="result"></h2>
+
+    </div>
+
+    <script>
+        function calculateSum()
+        {
+            let n=parseInt(document.getElementById("num").value);
+            let sum=0;
+
+            if(isNaN(n)||n<=0)
+        {
+            document.getElementById("result").innerHTML="Please eneter a valid positive number";
+            return;
+        }
+
+        for(int i=1; i<=n; i++)
+        {
+            if(i%2==0)
+         {
+            sum=sum+i;
+         } 
+        }
+        document.getElementById("result").innerHTML="Sum of even numbers from 1 to" +n+ "is" + sum;
+        }
+    </script>
+    
+</body>
+</html>
