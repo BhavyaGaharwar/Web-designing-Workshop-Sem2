@@ -15,29 +15,18 @@ if(average >= 90)
         grade = "A+";
     }
 else if(average >= 75)
-    {
-        grade = "A";
-    }
+    { grade = "A"; }
 else if(average >= 60)
-    {
-        grade = "B";
-    }
+    {  grade = "B"; }
 else if(average >= 50)
-    {
-        grade = "C";
-    }
-else{
-    grade = "F";
-    }
-
+    { grade = "C"; }
+else{ grade = "F";}
 if(average >= 40)
     {
         result = "PASS";
     }
 else
-    {
-        result = "FAIL";
-    }
+    { result = "FAIL"; }
 
 document.getElementById("result").innerHTML =
 "Total Marks: " + total + "<br>" +
@@ -45,3 +34,7 @@ document.getElementById("result").innerHTML =
 "Grade: " + grade + "<br>" +
 "Result: " + result;
 }
+
+
+
+

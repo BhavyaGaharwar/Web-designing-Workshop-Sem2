@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sum of even numbers</title>
+    <title>Sum Of Even Numbers</title>
     <style>
         body{
-            background:white;
+            background:rgb(243, 209, 209);
             padding:10px;
             text-align:center;
-            font-style:Ariel;
+            font-family:Ariel;
         }
         .container{
-            background:beige;
-            width:80%;
+            background:rgb(241, 125, 107);
+            width:100%;
             padding:10px;
             border:20px;
-            border-shadow:0px 0px 5px gray;
+            box-shadow:0px 0px 5px gray;
         }
         input{
             width:80%;
             font-size:8px;
             padding:10px;
-            font-style:bold;
+            font-weight:bold;
         }
         button{
-            background:blue;
+            background:rgb(68, 231, 65);
             color:white;
             border:none;
             border-radius:5px;
             cursor:pointer;
         }
         button:hover{
-            background-color:blue;
+            background-color:rgb(74, 242, 82);
         }
         h2{
             font-size:15px;
@@ -44,12 +44,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Sum of even numbers</h1>
+        <h1>Sum Of Even Numbers</h1>
         <input type="number" id="num" placeholder="Enter value of N">
         <br><br>
 
         <button onclick="calculateSum()">Calculate</button>
-        <h2> id="result"></h2>
+        <h2 id="result"></h2>
 
     </div>
 
@@ -65,7 +65,7 @@
             return;
         }
 
-        for(int i=1; i<=n; i++)
+        for(let i=1; i<=n; i++)
         {
             if(i%2==0)
          {
