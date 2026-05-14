@@ -2,9 +2,9 @@ import StudentCard from "./components/StudentCard.jsx";
 
 export default function App() {
   const students = [
-    { name: "Bhavya SIngh", course: "Computer Science", marks: 91 },
+    { name: "Bhavya SIngh", course: "Computer Science", marks: 90 },
     { name: "Aditi Tiwari", course: "AIML", marks: 95 },
-    { name: "Aditi Yadav", course: "DS", marks: 90 }
+    { name: "Aditi Yadav", course: "DS", marks: 96 }
   ];
 
   return (
