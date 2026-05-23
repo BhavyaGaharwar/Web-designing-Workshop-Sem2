@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Web Page</title>
+
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .main-container {
+            width: 95%;
+            margin: 10px auto;
+            border: 2px solid black;
+            background-color: white;
+        }
+
+        header {
+            background-color: #2f80ed;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        header h1 {
+            font-size: 50px;
+            font-weight: bold;
+        }
+
+        .navbar {
+            padding: 8px 15px;
+        }
+
+        .content {
+            padding: 60px 30px;
+            min-height: 200px;
+        }
+
+        .column-divider {
+            border-right: 2px solid #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-container">
+
+   
+        <header>
+            <h1>My Website</h1>
+        </header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Website</a>
+
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="#">Contact</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="container-fluid content">
+            <div class="row">
+
+                <div class="col-md-6 column-divider">
+                    <h3><b>Column 1</b></h3>
+
+                    <p>
+                        This is the first column. On small devices the
+                        column occupies full width, while on medium and
+                        large devices it occupies half width using
+                        Bootstrap grid classes.
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <h3><b>Column 2</b></h3>
+
+                    <p>
+                        This is the second column. Bootstrap grid
+                        system helps to create responsive layout.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+      
+        <footer>
+            Copyright © 2026 My Website
+        </footer>
+
+    </div>
+    <br><br>
+    <div style="text-align: center;">
+      |Bhavya Singh| 2503201000398 |CSE-14|
+    </div>
+
+</body>
+
+</html>
