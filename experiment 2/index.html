@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            background: #f8f9fa;
+        }
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+        footer {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">TechStore</a>
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PRODUCTS -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Card 1 -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/laptop-with-sun-background_1232-429.jpg?semt=ais_hybrid&w=740&q=80"
+                        height="200px"
+                        class="card-img-top"
+                        alt="Laptop">
+
+                    <div class="card-body">
+                         <h5>Laptop</h5>
+                         <p>High performance laptop</p>
+                        <h6>
+                            ₹50,000
+                            <span class="badge bg-success">New</span>
+                        </h6>
+
+                        <button class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#m1">
+
+                            View Details
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="card">
+
+                    <img src="data:image/jpeg;base64,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"
+                        height="200px"
+                        class="card-img-top"
+                        alt="Mobile">
+
+                    <div class="card-body">
+
+                        <h5>Mobile</h5>
+
+                        <p>Latest smartphone</p>
+
+                        <h6>
+                            ₹30,000
+                            <span class="badge bg-danger">Sale</span>
+                        </h6>
+
+                        <button class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#m2">
+
+                            View Details
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-4 col-md-6 col-12 mb-4">
+                <div class="card">
+
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTndMcJW71HLgi9ntgoterJiJJjLxbtOVVpyA&s"
+                        height="200px"
+                        class="card-img-top"
+                        alt="Headphones">
+
+                    <div class="card-body">
+
+                        <h5>Headphones</h5>
+
+                        <p>Noise cancelling</p>
+
+                        <h6>
+                            ₹5,000
+                            <span class="badge bg-success">New</span>
+                        </h6>
+
+                        <button class="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#m3">
+
+                            View Details
+                        </button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- MODAL 1 -->
+    <div class="modal fade" id="m1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5>Laptop Details</h5>
+
+                    <button class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    16GB RAM, SSD, Fast performance
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Close
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 2 -->
+    <div class="modal fade" id="m2">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5>Mobile Details</h5>
+
+                    <button class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    High camera quality smartphone
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Close
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL 3 -->
+    <div class="modal fade" id="m3">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5>Headphones Details</h5>
+
+                    <button class="btn-close"
+                        data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    Best sound quality with bass
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary"
+                        data-bs-dismiss="modal">
+
+                        Close
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center p-3">
+        <p>© 2026 TechStore | Follow us on social media</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <br><br>
+    <div style="text-align: center;">
+      |Bhavya Singh| 2503201000398|CSE-14|
+    </div>
+
+</body>
+</html>
