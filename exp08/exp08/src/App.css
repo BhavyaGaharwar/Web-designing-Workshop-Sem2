@@ -62,3 +62,9 @@ button {
 button:hover {
   background-color: #187bcd;
 }
+footer{
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+}
