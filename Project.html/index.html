@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flipkart Clone</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body style="margin:0;font-family:Arial,sans-serif;background:#f1f3f6;">
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        const { useState } = React;
+
+        function App() {
+
+            const [cartCount, setCartCount] = useState(0);
+
+            const products = [
+                {
+                    id:1,
+                    name:"iPhone 15",
+                    price:"₹69,999",
+                    rating:"4.6",
+                    image:"https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500"
+                },
+                {
+                    id:2,
+                    name:"Samsung Galaxy S24",
+                    price:"₹74,999",
+                    rating:"4.5",
+                    image:"https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500"
+                },
+                {
+                    id:3,
+                    name:"Laptop",
+                    price:"₹54,999",
+                    rating:"4.4",
+                    image:"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500"
+                },
+                {
+                    id:4,
+                    name:"Smart Watch",
+                    price:"₹4,999",
+                    rating:"4.3",
+                    image:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500"
+                },
+                {
+                    id:5,
+                    name:"Headphones",
+                    price:"₹2,999",
+                    rating:"4.2",
+                    image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"
+                },
+                {
+                    id:6,
+                    name:"Bluetooth Speaker",
+                    price:"₹1,999",
+                    rating:"4.1",
+                    image:"https://images.unsplash.com/photo-1589003077984-894e133dabab?w=500"
+                }
+            ];
+
+            return (
+                <div>
+
+                    {/* Navbar */}
+                    <div style={{
+                        background:"#2874f0",
+                        color:"white",
+                        padding:"15px",
+                        display:"flex",
+                        justifyContent:"space-between",
+                        alignItems:"center"
+                    }}>
+
+                        <h2 style={{margin:"0"}}>Flipkart</h2>
+
+                        <input
+                            type="text"
+                            placeholder="Search Products..."
+                            style={{
+                                width:"40%",
+                                padding:"10px",
+                                border:"none",
+                                borderRadius:"4px"
+                            }}
+                        />
+
+                        <h3>🛒 Cart ({cartCount})</h3>
+
+                    </div>
+
+                    {/* Categories */}
+
+                    <div style={{
+                        display:"flex",
+                        justifyContent:"space-around",
+                        background:"white",
+                        padding:"15px",
+                        marginBottom:"20px"
+                    }}>
+                        <div>Mobiles</div>
+                        <div>Fashion</div>
+                        <div>Electronics</div>
+                        <div>Home</div>
+                        <div>Appliances</div>
+                        <div>Travel</div>
+                    </div>
+
+                    {/* Product Section */}
+
+                    <div style={{
+                        display:"flex",
+                        flexWrap:"wrap",
+                        justifyContent:"center",
+                        gap:"20px",
+                        padding:"20px"
+                    }}>
+
+                        {products.map(product => (
+
+                            <div
+                                key={product.id}
+                                style={{
+                                    width:"250px",
+                                    background:"white",
+                                    borderRadius:"10px",
+                                    boxShadow:"0 2px 8px rgba(0,0,0,0.2)",
+                                    padding:"15px",
+                                    textAlign:"center"
+                                }}
+                            >
+
+                                <img
+                                    src={product.image}
+                                    alt={product.name}
+                                    style={{
+                                        width:"100%",
+                                        height:"200px",
+                                        objectFit:"cover",
+                                        borderRadius:"8px"
+                                    }}
+                                />
+
+                                <h3>{product.name}</h3>
+
+                                <h2 style={{color:"#2874f0"}}>
+                                    {product.price}
+                                </h2>
+
+                                <p>⭐ {product.rating}</p>
+
+                                <button
+                                    onClick={() => setCartCount(cartCount + 1)}
+                                    style={{
+                                        background:"#ff9f00",
+                                        color:"white",
+                                        border:"none",
+                                        padding:"10px 20px",
+                                        borderRadius:"5px",
+                                        cursor:"pointer"
+                                    }}
+                                >
+                                    Add to Cart
+                                </button>
+
+                            </div>
+
+                        ))}
+
+                    </div>
+
+                    {/* Footer */}
+
+                    <div style={{
+                        background:"#172337",
+                        color:"white",
+                        textAlign:"center",
+                        padding:"20px",
+                        marginTop:"20px"
+                    }}>
+                        <h3>Flipkart Clone Project</h3>
+                        <p>Made using React & useState</p>
+                    </div>
+
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
+
+    </script>
+
+</body>
+</html>
