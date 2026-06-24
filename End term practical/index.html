@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Armstrong Number Checker</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Armstrong Number Checker</h2>
+
+        <input type="number" id="numberInput" placeholder="Enter a number">
+
+        <br>
+
+        <button onclick="checkArmstrong()">
+            Check
+        </button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkArmstrong() {
+            let num = document.getElementById("numberInput").value;
+
+            if (num === "") {
+                document.getElementById("result").innerHTML =
+                    "Please enter a number!";
+                return;
+            }
+
+            let originalNum = Number(num);
+            let digits = num.length;
+            let sum = 0;
+
+            for (let digit of num) {
+                sum += Math.pow(Number(digit), digits);
+            }
+
+            if (sum === originalNum) {
+                document.getElementById("result").innerHTML =
+                    originalNum + " is an Armstrong Number.";
+            } else {
+                document.getElementById("result").innerHTML =
+                    originalNum + " is NOT an Armstrong Number.";
+            }
+        }
+    </script>
+
+</body>
+</html>
